@@ -1,4 +1,4 @@
-# skript-addon
+# MyAddon
 
 A [Skript](https://github.com/SkriptLang/Skript) addon template.
 
