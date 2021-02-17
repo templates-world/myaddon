@@ -1,0 +1,8 @@
+name: MyAddon
+description: MyAddon description
+authors: [author]
+website: https://github.com/author/MyAddon
+version: 0.1.0
+main: com.author.myaddon.MyAddon
+depend:
+  - Skript
