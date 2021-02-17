@@ -24,7 +24,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
 
-      - name: Build Skent
+      - name: Build MyAddon
         run: ./gradlew build
 
       - name: Upload nightly build
