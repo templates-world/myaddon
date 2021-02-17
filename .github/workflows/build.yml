@@ -21,6 +21,9 @@ jobs:
           java-package: jdk
           architecture: x64
 
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
       - name: Build Skent
         run: ./gradlew build
 
