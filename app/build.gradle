@@ -7,7 +7,6 @@ group 'com.author.myaddon'
 sourceCompatibility = 1.8
 
 repositories {
-    jcenter()
     mavenCentral()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' } // Spigot
     maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' } // Spigot
@@ -25,6 +24,6 @@ dependencies {
 
 jar {
     from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
-}
+ }
