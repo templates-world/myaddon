@@ -1,8 +1,8 @@
 package com.author.myaddon.skript.effects;
 
-import com.author.myaddon.utils.skript.AsyncEffect;
-
 import org.bukkit.event.Event;
+
+import com.author.myaddon.utils.skript.AsyncEffect;
 
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -30,7 +30,7 @@ public class EffMyEffectAsync extends AsyncEffect {
     }
 
     @Override
-    protected void executeAsync(Event e) {
+    protected void execute(Event e) {
         System.out.println("Executing async effect...");
         try {
             Thread.sleep(10000);

@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.author.myaddon.utils.PackageLoader;
-
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.author.myaddon.utils.PackageLoader;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
@@ -16,6 +17,7 @@ import ch.njol.skript.SkriptAddon;
 public class MyAddon extends JavaPlugin {
 
     public static MyAddon instance;
+    public static FileConfiguration config;
 	SkriptAddon addon;
 
 	public void onEnable() {
@@ -60,6 +62,12 @@ public class MyAddon extends JavaPlugin {
                 getServer().getPluginManager().registerEvents(evt, this);
             }
         });
+
+        if (!getDataFolder().exists()) {
+			saveDefaultConfig();
+		}
+
+		config = getConfig();
 
     }
 
