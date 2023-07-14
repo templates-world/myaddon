@@ -19,6 +19,9 @@ dependencies {
     // Skript
     compileOnly 'org.spigotmc:spigot-api:1.13.2-R0.1-SNAPSHOT'
     compileOnly 'com.github.SkriptLang:Skript:2.3.7'
+    
+    // Migrations
+    compileOnly 'com.github.Olyno:skript-migrate:1.1.0'
 
 }
 

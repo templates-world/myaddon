@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.author.myaddon.utils.PackageLoader;
+import com.olyno.skriptmigrate.SkriptMigrate;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
@@ -63,6 +64,11 @@ public class MyAddon extends JavaPlugin {
             }
         });
 
+        // Setup migrations
+		if (classExist("com.olyno.skriptmigrate.SkriptMigrate")) {
+			SkriptMigrate.load(this);
+		}
+
         if (!getDataFolder().exists()) {
 			saveDefaultConfig();
 		}
@@ -70,5 +76,14 @@ public class MyAddon extends JavaPlugin {
 		config = getConfig();
 
     }
+
+    private boolean classExist(String clazz) {
+		try {
+			Class.forName(clazz);
+			return true;
+		} catch (ClassNotFoundException e) {
+			return false;
+		}
+	}
 
 }
