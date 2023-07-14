@@ -12,7 +12,6 @@ This template includes:
 This boilerplate contains a lot of new cool things to use:
 
  * ``AsyncEffect``: Make an effect asynchronously or synchronously depending of user needs.
- * ``EffectSection``: Use an effect as a section/scope/condition.
  * ``PackageLoader``: Load all classes from a package asynchronously.
  * ``MultiplePropertyExpression``: A ``SimplePropertyExpression`` but with more than 1 item.
  * A clean files structure.
@@ -24,8 +23,8 @@ If you want to try this addon by default, you can try this code:
 ```vb
 command t:
     trigger:
-        my async effect:
-            broadcast "Executed after my async effect"
+        async my effect:
+        broadcast "Executed after my async effect"
         set {_type} to new type
         set type name of {_type} to "hello"
         broadcast "Name of type: %type name of {_type}%"
