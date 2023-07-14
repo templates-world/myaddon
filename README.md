@@ -14,6 +14,7 @@ This boilerplate contains a lot of new cool things to use:
  * ``AsyncEffect``: Make an effect asynchronously or synchronously depending of user needs.
  * ``PackageLoader``: Load all classes from a package asynchronously.
  * ``MultiplePropertyExpression``: A ``SimplePropertyExpression`` but with more than 1 item.
+ * ``migrations.yml``: A file to migrate your addon from a version to another whenever you do an update.
  * A clean files structure.
 
 ## Demo
