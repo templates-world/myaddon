@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: MyAddon
-          path: build/libs/MyAddon-all.jar
+          path: app/build/libs/MyAddon.jar
